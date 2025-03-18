@@ -20,3 +20,5 @@ oecd_countries = oecd['Country'].tolist()
 filtered_data = merged_data[merged_data['Country'].isin(oecd_countries)]
 
 print(filtered_data)
+filtered_data.to_excel('data/filtered_data.xlsx', index=False)
+filtered_data.to_csv('data/filtered_data.csv', index=False)
